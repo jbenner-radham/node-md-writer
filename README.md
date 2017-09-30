@@ -38,6 +38,10 @@ Testing
 $ yarn test # Or alternatively: `npm test`
 ```
 
+Reference
+---------
+- [CommonMark Spec](http://spec.commonmark.org/)
+
 License
 -------
 The MIT License (Expat). See the [license file](LICENSE) for details.
