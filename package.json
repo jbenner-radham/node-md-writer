@@ -1,6 +1,6 @@
 {
   "name": "md-writer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A utility module for writing Markdown adhering to the CommonMark spec.",
   "engines": {
     "node": ">=6.11"
