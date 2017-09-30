@@ -1,6 +1,6 @@
 {
   "name": "md-writer",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A utility module for writing Markdown.",
   "main": "lib/index.js",
   "directories": {
