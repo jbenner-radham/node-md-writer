@@ -13,7 +13,10 @@ Usage
 ```js
 'use strict';
 
-const {fencedCodeBlock, h1, h2, h3} = require('md-writer');
+const {codeSpan, fencedCodeBlock, h1, h2, h3} = require('md-writer');
+
+codeSpan('<span>Hello world!</span>');
+// > `<span>Hello world!</span>`
 
 fencedCodeBlock('5 + 5');
 // > ```

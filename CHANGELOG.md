@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 [Unreleased]
 ------------
 ### Added
+- Added `MdWriter.codeSpan()` method.
 - Added `MdWriter.h3()` method.
 - Added "Reference" section to the `README.md` file.
 

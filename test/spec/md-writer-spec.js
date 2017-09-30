@@ -9,6 +9,23 @@ describe('md-writer', function () {
         expect(mdWriter).toEqual(any(Function));
     });
 
+    describe('.codeSpan', function () {
+        it('is a function', function () {
+            expect(mdWriter.codeSpan).toEqual(any(Function));
+        });
+
+        it('returns a level three header', function () {
+            const code = '<span>Hello world!</span>';
+            const expected = '`<span>Hello world!</span>`';
+
+            expect(mdWriter.codeSpan(code)).toEqual(expected);
+        });
+
+        it('returns a string', function () {
+            expect(mdWriter.codeSpan()).toEqual(any(String));
+        });
+    });
+
     describe('.fencedCodeBlock', function () {
         it('is a function', function () {
             expect(mdWriter.fencedCodeBlock).toEqual(any(Function));
