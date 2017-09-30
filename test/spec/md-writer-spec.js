@@ -8,6 +8,16 @@ describe('md-writer', function () {
         expect(mdWriter).toEqual(any(Function));
     });
 
+    describe('.fencedCodeBlock', function () {
+        it('is a function', function () {
+            expect(mdWriter.fencedCodeBlock).toEqual(any(Function));
+        });
+
+        it('returns a string', function () {
+            expect(mdWriter.fencedCodeBlock()).toEqual(any(String));
+        });
+    });
+
     describe('.h1', function () {
         it('is a function', function () {
             expect(mdWriter.h1).toEqual(any(Function));
