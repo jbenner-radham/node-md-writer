@@ -8,6 +8,27 @@ Install
 $ yarn add md-writer # Or alternatively: `npm install --save md-writer`
 ```
 
+Usage
+-----
+```js
+'use strict';
+
+const {fencedCodeBlock, h1, h2} = require('md-writer');
+
+fencedCodeBlock('5 + 5');
+// > ```
+// > 5 + 5
+// > ```
+
+h1('Header One');
+// > Header One
+// > ==========
+
+h2('Header Two');
+// > Header Two
+// > ----------
+```
+
 Testing
 -------
 ```sh
