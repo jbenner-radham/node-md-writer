@@ -37,4 +37,14 @@ describe('md-writer', function () {
             expect(mdWriter.h2()).toEqual(any(String));
         });
     });
+
+    describe('.h3', function () {
+        it('is a function', function () {
+            expect(mdWriter.h3).toEqual(any(Function));
+        });
+
+        it('returns a string', function () {
+            expect(mdWriter.h3()).toEqual(any(String));
+        });
+    });
 });
