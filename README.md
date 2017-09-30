@@ -5,15 +5,15 @@ A utility module for writing Markdown.
 Install
 -------
 ```sh
-$ npm install --save md-writer
+$ yarn add md-writer # Or alternatively: `npm install --save md-writer`
 ```
 
 Testing
 -------
 ```sh
-$ npm test
+$ yarn test # Or alternatively: `npm test`
 ```
 
 License
 -------
-The MIT License (Expat). See the license file for details.
+The MIT License (Expat). See the [license file](LICENSE) for details.
