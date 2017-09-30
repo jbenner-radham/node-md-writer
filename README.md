@@ -13,7 +13,7 @@ Usage
 ```js
 'use strict';
 
-const {fencedCodeBlock, h1, h2} = require('md-writer');
+const {fencedCodeBlock, h1, h2, h3} = require('md-writer');
 
 fencedCodeBlock('5 + 5');
 // > ```
@@ -27,6 +27,9 @@ h1('Header One');
 h2('Header Two');
 // > Header Two
 // > ----------
+
+h3('Header Three');
+// > ### Header Three
 ```
 
 Testing
