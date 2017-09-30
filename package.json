@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/jbenner-radham/node-md-writer#readme",
   "devDependencies": {
+    "common-tags": "^1.4.0",
     "jasmine": "^2.8.0"
   }
 }
