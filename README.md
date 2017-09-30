@@ -1,6 +1,6 @@
 md-writer
 =========
-A utility module for writing Markdown.
+A utility module for writing [Markdown][MARKDOWN] adhering to the [CommonMark][COMMONMARK] spec.
 
 Install
 -------
@@ -48,3 +48,6 @@ Reference
 License
 -------
 The MIT License (Expat). See the [license file](LICENSE) for details.
+
+[COMMONMARK]: http://commonmark.org/
+[MARKDOWN]: https://daringfireball.net/projects/markdown/
