@@ -14,6 +14,16 @@ describe('md-writer', function () {
             expect(mdWriter.fencedCodeBlock).toEqual(any(Function));
         });
 
+        it('returns a fenced code block', function () {
+            const expected = stripIndents`
+                \`\`\`
+                5 + 5
+                \`\`\`
+            `;
+
+            expect(mdWriter.fencedCodeBlock('5 + 5')).toEqual(expected);
+        });
+
         it('returns a string', function () {
             expect(mdWriter.fencedCodeBlock()).toEqual(any(String));
         });
