@@ -2,7 +2,7 @@
 
 const any = jasmine.any;
 const mdWriter = require('../../');
-const {stripIndents} = require('common-tags');
+const { stripIndents } = require('common-tags');
 
 describe('md-writer', function () {
     it('is a function', function () {
@@ -58,7 +58,7 @@ describe('md-writer', function () {
                 \`\`\`
             `;
 
-            expect(mdWriter.fencedJsCodeBlock("console.log('Hello world!');")).toEqual(expected);
+            expect(mdWriter.fencedJsCodeBlock(`console.log('Hello world!');`)).toEqual(expected);
         });
 
         it('returns a string', function () {
@@ -78,7 +78,7 @@ describe('md-writer', function () {
                 \`\`\`
             `;
 
-            expect(mdWriter.fencedTsCodeBlock("console.log('Hello world!');")).toEqual(expected);
+            expect(mdWriter.fencedTsCodeBlock(`console.log('Hello world!');`)).toEqual(expected);
         });
 
         it('returns a string', function () {
