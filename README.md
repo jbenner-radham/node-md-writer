@@ -1,5 +1,7 @@
 md-writer
 =========
+[![CI Status][CI BADGE]][CI PAGE]
+
 A utility module for writing [Markdown][MARKDOWN] adhering to the [CommonMark][COMMONMARK] spec.
 
 Install
@@ -49,5 +51,8 @@ License
 -------
 The MIT License (Expat). See the [license file](LICENSE) for details.
 
+
+[CI BADGE]: https://github.com/jbenner-radham/node-md-writer/actions/workflows/ci.yaml/badge.svg
+[CI PAGE]: https://github.com/jbenner-radham/node-md-writer/actions/workflows/ci.yaml
 [COMMONMARK]: http://commonmark.org/
 [MARKDOWN]: https://daringfireball.net/projects/markdown/
