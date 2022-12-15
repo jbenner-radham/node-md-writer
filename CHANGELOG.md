@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 [Unreleased]
 ------------
+### Added
+- Added `MdWriter.fencedJsCodeBlock()` method.
+
 ### Changed
 - The `MdWriter.fencedShCodeBlock()` method no longer prefixes the code with a dollar sign.
 

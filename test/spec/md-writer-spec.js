@@ -46,6 +46,26 @@ describe('md-writer', function () {
         });
     });
 
+    describe('.fencedJsCodeBlock', function () {
+        it('is a function', function () {
+            expect(mdWriter.fencedJsCodeBlock).toEqual(any(Function));
+        });
+
+        it('returns a fenced code block', function () {
+            const expected = stripIndents`
+                \`\`\`js
+                console.log('Hello world!');
+                \`\`\`
+            `;
+
+            expect(mdWriter.fencedJsCodeBlock("console.log('Hello world!');")).toEqual(expected);
+        });
+
+        it('returns a string', function () {
+            expect(mdWriter.fencedJsCodeBlock()).toEqual(any(String));
+        });
+    });
+
     describe('.fencedShCodeBlock', function () {
         it('is a function', function () {
             expect(mdWriter.fencedShCodeBlock).toEqual(any(Function));
