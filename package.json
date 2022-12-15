@@ -2,34 +2,38 @@
   "name": "md-writer",
   "version": "0.2.0",
   "description": "A utility module for writing Markdown adhering to the CommonMark spec.",
-  "engines": {
-    "node": ">=6.11"
+  "keywords": [
+    "commonmark",
+    "markdown",
+    "md"
+  ],
+  "homepage": "https://github.com/jbenner-radham/node-md-writer#readme",
+  "bugs": {
+    "url": "https://github.com/jbenner-radham/node-md-writer/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbenner-radham/node-md-writer.git"
+  },
+  "license": "MIT",
+  "author": "James Benner <james.benner@gmail.com> (https://www.jamesbenner.com/)",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib",
     "test": "test"
   },
   "scripts": {
+    "prepare": "husky install",
     "test": "jasmine --config=test/spec/support/jasmine.json"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jbenner-radham/node-md-writer.git"
-  },
-  "keywords": [
-    "commonmark",
-    "markdown",
-    "md"
-  ],
-  "author": "James Benner <james.benner@gmail.com> (https://www.jamesbenner.com/)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jbenner-radham/node-md-writer/issues"
-  },
-  "homepage": "https://github.com/jbenner-radham/node-md-writer#readme",
   "devDependencies": {
     "common-tags": "^1.8.2",
-    "jasmine": "^3.99.0"
+    "husky": "^8.0.2",
+    "jasmine": "^3.99.0",
+    "lint-staged": "^13.1.0",
+    "sort-package-json": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=6.11"
   }
 }
