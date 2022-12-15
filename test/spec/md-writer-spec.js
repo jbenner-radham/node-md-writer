@@ -46,6 +46,26 @@ describe('md-writer', function () {
         });
     });
 
+    describe('.fencedShCodeBlock', function () {
+        it('is a function', function () {
+            expect(mdWriter.fencedShCodeBlock).toEqual(any(Function));
+        });
+
+        it('returns a fenced code block', function () {
+            const expected = stripIndents`
+                \`\`\`sh
+                npm install @awesome/package
+                \`\`\`
+            `;
+
+            expect(mdWriter.fencedShCodeBlock('npm install @awesome/package')).toEqual(expected);
+        });
+
+        it('returns a string', function () {
+            expect(mdWriter.fencedShCodeBlock()).toEqual(any(String));
+        });
+    });
+
     describe('.h1', function () {
         it('is a function', function () {
             expect(mdWriter.h1).toEqual(any(Function));
