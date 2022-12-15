@@ -7,7 +7,7 @@ A utility module for writing [Markdown][MARKDOWN] adhering to the [CommonMark][C
 Install
 -------
 ```sh
-$ yarn add md-writer # Or alternatively: `npm install --save md-writer`
+yarn add md-writer # Or alternatively: `npm install --save md-writer`
 ```
 
 Usage
@@ -40,7 +40,7 @@ h3('Header Three');
 Testing
 -------
 ```sh
-$ yarn test # Or alternatively: `npm test`
+yarn test # Or alternatively: `npm test`
 ```
 
 Reference
