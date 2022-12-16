@@ -7,7 +7,8 @@ import {
     fencedShCodeBlock,
     h1,
     h2,
-    h3
+    h3,
+    h4
 } from '../lib/index.js';
 
 const { any } = jasmine;
@@ -161,6 +162,22 @@ describe('md-writer', function () {
 
         it('returns a string', function () {
             expect(h3()).toEqual(any(String));
+        });
+    });
+
+    describe('h4', function () {
+        it('is a function', function () {
+            expect(h4).toEqual(any(Function));
+        });
+
+        it('returns a level four header', function () {
+            const expected = '#### Header Four';
+
+            expect(h4('Header Four')).toEqual(expected);
+        });
+
+        it('returns a string', function () {
+            expect(h4()).toEqual(any(String));
         });
     });
 });
