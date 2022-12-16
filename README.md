@@ -13,9 +13,7 @@ yarn add md-writer # Or alternatively: `npm install md-writer`
 Usage
 -----
 ```js
-'use strict';
-
-const { codeSpan, fencedCodeBlock, h1, h2, h3 } = require('md-writer');
+import { codeSpan, fencedCodeBlock, h1, h2, h3 } from 'md-writer';
 
 codeSpan('<span>Hello world!</span>');
 // > `<span>Hello world!</span>`

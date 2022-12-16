@@ -1,34 +1,38 @@
-'use strict';
+import { stripIndents } from 'common-tags';
+import {
+    codeSpan,
+    fencedCodeBlock,
+    fencedJsCodeBlock,
+    fencedTsCodeBlock,
+    fencedShCodeBlock,
+    h1,
+    h2,
+    h3
+} from '../lib/index.js';
 
-const any = jasmine.any;
-const mdWriter = require('../../');
-const { stripIndents } = require('common-tags');
+const { any } = jasmine;
 
 describe('md-writer', function () {
-    it('is a function', function () {
-        expect(mdWriter).toEqual(any(Function));
-    });
-
-    describe('.codeSpan', function () {
+    describe('codeSpan', function () {
         it('is a function', function () {
-            expect(mdWriter.codeSpan).toEqual(any(Function));
+            expect(codeSpan).toEqual(any(Function));
         });
 
         it('returns a level three header', function () {
             const code = '<span>Hello world!</span>';
             const expected = '`<span>Hello world!</span>`';
 
-            expect(mdWriter.codeSpan(code)).toEqual(expected);
+            expect(codeSpan(code)).toEqual(expected);
         });
 
         it('returns a string', function () {
-            expect(mdWriter.codeSpan()).toEqual(any(String));
+            expect(codeSpan()).toEqual(any(String));
         });
     });
 
-    describe('.fencedCodeBlock', function () {
+    describe('fencedCodeBlock', function () {
         it('is a function', function () {
-            expect(mdWriter.fencedCodeBlock).toEqual(any(Function));
+            expect(fencedCodeBlock).toEqual(any(Function));
         });
 
         it('returns a fenced code block', function () {
@@ -38,17 +42,17 @@ describe('md-writer', function () {
                 \`\`\`
             `;
 
-            expect(mdWriter.fencedCodeBlock('5 + 5')).toEqual(expected);
+            expect(fencedCodeBlock('5 + 5')).toEqual(expected);
         });
 
         it('returns a string', function () {
-            expect(mdWriter.fencedCodeBlock()).toEqual(any(String));
+            expect(fencedCodeBlock()).toEqual(any(String));
         });
     });
 
-    describe('.fencedJsCodeBlock', function () {
+    describe('fencedJsCodeBlock', function () {
         it('is a function', function () {
-            expect(mdWriter.fencedJsCodeBlock).toEqual(any(Function));
+            expect(fencedJsCodeBlock).toEqual(any(Function));
         });
 
         it('returns a fenced code block', function () {
@@ -58,17 +62,17 @@ describe('md-writer', function () {
                 \`\`\`
             `;
 
-            expect(mdWriter.fencedJsCodeBlock(`console.log('Hello world!');`)).toEqual(expected);
+            expect(fencedJsCodeBlock(`console.log('Hello world!');`)).toEqual(expected);
         });
 
         it('returns a string', function () {
-            expect(mdWriter.fencedJsCodeBlock()).toEqual(any(String));
+            expect(fencedJsCodeBlock()).toEqual(any(String));
         });
     });
 
-    describe('.fencedTsCodeBlock', function () {
+    describe('fencedTsCodeBlock', function () {
         it('is a function', function () {
-            expect(mdWriter.fencedTsCodeBlock).toEqual(any(Function));
+            expect(fencedTsCodeBlock).toEqual(any(Function));
         });
 
         it('returns a fenced code block', function () {
@@ -78,17 +82,17 @@ describe('md-writer', function () {
                 \`\`\`
             `;
 
-            expect(mdWriter.fencedTsCodeBlock(`console.log('Hello world!');`)).toEqual(expected);
+            expect(fencedTsCodeBlock(`console.log('Hello world!');`)).toEqual(expected);
         });
 
         it('returns a string', function () {
-            expect(mdWriter.fencedTsCodeBlock()).toEqual(any(String));
+            expect(fencedTsCodeBlock()).toEqual(any(String));
         });
     });
 
-    describe('.fencedShCodeBlock', function () {
+    describe('fencedShCodeBlock', function () {
         it('is a function', function () {
-            expect(mdWriter.fencedShCodeBlock).toEqual(any(Function));
+            expect(fencedShCodeBlock).toEqual(any(Function));
         });
 
         it('returns a fenced code block', function () {
@@ -98,17 +102,17 @@ describe('md-writer', function () {
                 \`\`\`
             `;
 
-            expect(mdWriter.fencedShCodeBlock('npm install @awesome/package')).toEqual(expected);
+            expect(fencedShCodeBlock('npm install @awesome/package')).toEqual(expected);
         });
 
         it('returns a string', function () {
-            expect(mdWriter.fencedShCodeBlock()).toEqual(any(String));
+            expect(fencedShCodeBlock()).toEqual(any(String));
         });
     });
 
-    describe('.h1', function () {
+    describe('h1', function () {
         it('is a function', function () {
-            expect(mdWriter.h1).toEqual(any(Function));
+            expect(h1).toEqual(any(Function));
         });
 
         it('returns a level one header', function () {
@@ -117,17 +121,17 @@ describe('md-writer', function () {
                 ==========
             `;
 
-            expect(mdWriter.h1('Header One')).toEqual(expected);
+            expect(h1('Header One')).toEqual(expected);
         });
 
         it('returns a string', function () {
-            expect(mdWriter.h1()).toEqual(any(String));
+            expect(h1()).toEqual(any(String));
         });
     });
 
-    describe('.h2', function () {
+    describe('h2', function () {
         it('is a function', function () {
-            expect(mdWriter.h2).toEqual(any(Function));
+            expect(h2).toEqual(any(Function));
         });
 
         it('returns a level two header', function () {
@@ -136,27 +140,27 @@ describe('md-writer', function () {
                 ----------
             `;
 
-            expect(mdWriter.h2('Header Two')).toEqual(expected);
+            expect(h2('Header Two')).toEqual(expected);
         });
 
         it('returns a string', function () {
-            expect(mdWriter.h2()).toEqual(any(String));
+            expect(h2()).toEqual(any(String));
         });
     });
 
-    describe('.h3', function () {
+    describe('h3', function () {
         it('is a function', function () {
-            expect(mdWriter.h3).toEqual(any(Function));
+            expect(h3).toEqual(any(Function));
         });
 
         it('returns a level three header', function () {
             const expected = '### Header Three';
 
-            expect(mdWriter.h3('Header Three')).toEqual(expected);
+            expect(h3('Header Three')).toEqual(expected);
         });
 
         it('returns a string', function () {
-            expect(mdWriter.h3()).toEqual(any(String));
+            expect(h3()).toEqual(any(String));
         });
     });
 });
