@@ -13,7 +13,17 @@ yarn add md-writer # Or alternatively: `npm install md-writer`
 Usage
 -----
 ```js
-import { codeSpan, fencedCodeBlock, h1, h2, h3 } from 'md-writer';
+import {
+    codeSpan,
+    fencedCodeBlock,
+    fencedJsCodeBlock,
+    fencedShCodeBlock,
+    fencedTsCodeBlock,
+    h1,
+    h2,
+    h3,
+    h4
+} from 'md-writer';
 
 codeSpan('<span>Hello world!</span>');
 // > `<span>Hello world!</span>`
@@ -21,6 +31,26 @@ codeSpan('<span>Hello world!</span>');
 fencedCodeBlock('5 + 5');
 // > ```
 // > 5 + 5
+// > ```
+
+fencedCodeBlock(`print('Hello world!')`, 'python');
+// > ```python
+// > print('Hello world!')
+// > ```
+
+fencedJsCodeBlock('console.log("Hello world!");');
+// > ```js
+// > console.log("Hello world!");
+// > ```
+
+fencedShCodeBlock(`print 'Hello world!'`);
+// > ```sh
+// > print 'Hello world!'
+// > ```
+
+fencedTsCodeBlock('console.log("Hello world!");');
+// > ```ts
+// > console.log("Hello world!");
 // > ```
 
 h1('Header One');
@@ -33,6 +63,9 @@ h2('Header Two');
 
 h3('Header Three');
 // > ### Header Three
+
+h4('Header Four');
+// > #### Header Four
 ```
 
 Testing
