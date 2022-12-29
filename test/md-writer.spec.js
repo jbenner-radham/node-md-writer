@@ -8,7 +8,8 @@ import {
     h1,
     h2,
     h3,
-    h4
+    h4,
+    h5
 } from '../lib/index.js';
 
 const { any } = jasmine;
@@ -178,6 +179,22 @@ describe('md-writer', function () {
 
         it('returns a string', function () {
             expect(h4()).toEqual(any(String));
+        });
+    });
+
+    describe('h5', function () {
+        it('is a function', function () {
+            expect(h5).toEqual(any(Function));
+        });
+
+        it('returns a level five header', function () {
+            const expected = '##### Header Five';
+
+            expect(h5('Header Five')).toEqual(expected);
+        });
+
+        it('returns a string', function () {
+            expect(h5()).toEqual(any(String));
         });
     });
 });

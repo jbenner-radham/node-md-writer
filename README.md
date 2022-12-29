@@ -22,7 +22,8 @@ import {
     h1,
     h2,
     h3,
-    h4
+    h4,
+    h5
 } from 'md-writer';
 
 codeSpan('<span>Hello world!</span>');
@@ -66,6 +67,9 @@ h3('Header Three');
 
 h4('Header Four');
 // > #### Header Four
+
+h5('Header Five');
+// > ##### Header Five
 ```
 
 **NOTE**: This is a pure ESM package. See [here](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c) for details.
