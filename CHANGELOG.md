@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added [TypeScript](https://www.typescriptlang.org/) types.
 
+### Changed
+- Updated the "Usage" section of the `README.md` file.
+
 [1.0.0] - 2022-12-16
 --------------------
 ### Added
