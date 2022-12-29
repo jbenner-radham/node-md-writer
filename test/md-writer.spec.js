@@ -9,7 +9,8 @@ import {
     h2,
     h3,
     h4,
-    h5
+    h5,
+    h6
 } from '../lib/index.js';
 
 const { any } = jasmine;
@@ -195,6 +196,22 @@ describe('md-writer', function () {
 
         it('returns a string', function () {
             expect(h5()).toEqual(any(String));
+        });
+    });
+
+    describe('h6', function () {
+        it('is a function', function () {
+            expect(h6).toEqual(any(Function));
+        });
+
+        it('returns a level six header', function () {
+            const expected = '###### Header Six';
+
+            expect(h6('Header Six')).toEqual(expected);
+        });
+
+        it('returns a string', function () {
+            expect(h6()).toEqual(any(String));
         });
     });
 });

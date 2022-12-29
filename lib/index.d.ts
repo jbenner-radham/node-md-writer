@@ -84,3 +84,10 @@ export function h4(text?: string): string;
  * @see https://spec.commonmark.org/0.30/#atx-heading
  */
 export function h5(text?: string): string;
+
+/**
+ * Create a level 6 Markdown header.
+ *
+ * @see https://spec.commonmark.org/0.30/#atx-heading
+ */
+export function h6(text?: string): string;

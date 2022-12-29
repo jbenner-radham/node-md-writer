@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added [TypeScript](https://www.typescriptlang.org/) types.
 - Added `h5()` function.
+- Added `h6()` function.
 
 ### Changed
 - Updated the "Usage" section of the `README.md` file.
